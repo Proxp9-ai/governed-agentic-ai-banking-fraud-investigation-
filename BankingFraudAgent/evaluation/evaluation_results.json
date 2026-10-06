@@ -1,0 +1,578 @@
+[
+  {
+    "case_id": "EVAL-01",
+    "model": "qwen3:4b",
+    "input": {
+      "case_id": "EVAL-01",
+      "amount": 2500,
+      "channel": "UPI",
+      "location": "Usual Location",
+      "device": "Known Device",
+      "failed_logins": 0
+    },
+    "reference": {
+      "risk_level": "LOW",
+      "human_review_required": false,
+      "route": "STANDARD_REVIEW",
+      "priority": "ROUTINE"
+    },
+    "model_output": {
+      "risk_level": "LOW",
+      "human_review_required": false,
+      "route": "STANDARD_REVIEW",
+      "priority": "ROUTINE"
+    },
+    "raw_output": "{\"risk_level\": \"LOW\", \"human_review_required\": false, \"route\": \"STANDARD_REVIEW\", \"priority\": \"ROUTINE\"}",
+    "latency_seconds": 56.218,
+    "comparison": {
+      "risk_level_match": true,
+      "human_review_match": true,
+      "route_match": true,
+      "priority_match": true
+    }
+  },
+  {
+    "case_id": "EVAL-01",
+    "model": "llama3.2:3b",
+    "input": {
+      "case_id": "EVAL-01",
+      "amount": 2500,
+      "channel": "UPI",
+      "location": "Usual Location",
+      "device": "Known Device",
+      "failed_logins": 0
+    },
+    "reference": {
+      "risk_level": "LOW",
+      "human_review_required": false,
+      "route": "STANDARD_REVIEW",
+      "priority": "ROUTINE"
+    },
+    "model_output": {
+      "risk_level": "LOW",
+      "human_review_required": false,
+      "route": "STANDARD_INVESTIGATION",
+      "priority": "NORMAL"
+    },
+    "raw_output": "{\n  \"risk_level\": \"LOW\",\n  \"human_review_required\": false,\n  \"route\": \"STANDARD_INVESTIGATION\",\n  \"priority\": \"NORMAL\"\n}",
+    "latency_seconds": 10.819,
+    "comparison": {
+      "risk_level_match": true,
+      "human_review_match": true,
+      "route_match": false,
+      "priority_match": false
+    }
+  },
+  {
+    "case_id": "EVAL-01",
+    "model": "gemma3:4b",
+    "input": {
+      "case_id": "EVAL-01",
+      "amount": 2500,
+      "channel": "UPI",
+      "location": "Usual Location",
+      "device": "Known Device",
+      "failed_logins": 0
+    },
+    "reference": {
+      "risk_level": "LOW",
+      "human_review_required": false,
+      "route": "STANDARD_REVIEW",
+      "priority": "ROUTINE"
+    },
+    "model_output": {
+      "risk_level": "LOW",
+      "human_review_required": false,
+      "route": "STANDARD_REVIEW",
+      "priority": "ROUTINE"
+    },
+    "raw_output": "{\n  \"risk_level\": \"LOW\",\n  \"human_review_required\": false,\n  \"route\": \"STANDARD_REVIEW\",\n  \"priority\": \"ROUTINE\"\n}",
+    "latency_seconds": 13.78,
+    "comparison": {
+      "risk_level_match": true,
+      "human_review_match": true,
+      "route_match": true,
+      "priority_match": true
+    }
+  },
+  {
+    "case_id": "EVAL-02",
+    "model": "qwen3:4b",
+    "input": {
+      "case_id": "EVAL-02",
+      "amount": 75000,
+      "channel": "Internet Banking",
+      "location": "New Location",
+      "device": "New Device",
+      "failed_logins": 4
+    },
+    "reference": {
+      "risk_level": "HIGH",
+      "human_review_required": true,
+      "route": "PRIORITY_INVESTIGATION",
+      "priority": "URGENT"
+    },
+    "model_output": {
+      "risk_level": "HIGH",
+      "human_review_required": true,
+      "route": "PRIORITY_INVESTIGATION",
+      "priority": "URGENT"
+    },
+    "raw_output": "{\"risk_level\": \"HIGH\", \"human_review_required\": true, \"route\": \"PRIORITY_INVESTIGATION\", \"priority\": \"URGENT\"}",
+    "latency_seconds": 46.021,
+    "comparison": {
+      "risk_level_match": true,
+      "human_review_match": true,
+      "route_match": true,
+      "priority_match": true
+    }
+  },
+  {
+    "case_id": "EVAL-02",
+    "model": "llama3.2:3b",
+    "input": {
+      "case_id": "EVAL-02",
+      "amount": 75000,
+      "channel": "Internet Banking",
+      "location": "New Location",
+      "device": "New Device",
+      "failed_logins": 4
+    },
+    "reference": {
+      "risk_level": "HIGH",
+      "human_review_required": true,
+      "route": "PRIORITY_INVESTIGATION",
+      "priority": "URGENT"
+    },
+    "model_output": {
+      "risk_level": "MEDIUM",
+      "human_review_required": true,
+      "route": "STANDARD_INVESTIGATION",
+      "priority": "NORMAL"
+    },
+    "raw_output": "{\n  \"risk_level\": \"MEDIUM\",\n  \"human_review_required\": true,\n  \"route\": \"STANDARD_INVESTIGATION\",\n  \"priority\": \"NORMAL\"\n}",
+    "latency_seconds": 14.595,
+    "comparison": {
+      "risk_level_match": false,
+      "human_review_match": true,
+      "route_match": false,
+      "priority_match": false
+    }
+  },
+  {
+    "case_id": "EVAL-02",
+    "model": "gemma3:4b",
+    "input": {
+      "case_id": "EVAL-02",
+      "amount": 75000,
+      "channel": "Internet Banking",
+      "location": "New Location",
+      "device": "New Device",
+      "failed_logins": 4
+    },
+    "reference": {
+      "risk_level": "HIGH",
+      "human_review_required": true,
+      "route": "PRIORITY_INVESTIGATION",
+      "priority": "URGENT"
+    },
+    "model_output": {
+      "risk_level": "MEDIUM",
+      "human_review_required": true,
+      "route": "STANDARD_INVESTIGATION",
+      "priority": "HIGH"
+    },
+    "raw_output": "{\n  \"risk_level\": \"MEDIUM\",\n  \"human_review_required\": true,\n  \"route\": \"STANDARD_INVESTIGATION\",\n  \"priority\": \"HIGH\"\n}",
+    "latency_seconds": 16.152,
+    "comparison": {
+      "risk_level_match": false,
+      "human_review_match": true,
+      "route_match": false,
+      "priority_match": false
+    }
+  },
+  {
+    "case_id": "EVAL-03",
+    "model": "qwen3:4b",
+    "input": {
+      "case_id": "EVAL-03",
+      "amount": 15000,
+      "channel": "Card",
+      "location": "Unknown",
+      "device": "Known Device",
+      "failed_logins": 0
+    },
+    "reference": {
+      "risk_level": "LOW",
+      "human_review_required": true,
+      "route": "EVIDENCE_VERIFICATION",
+      "priority": "HIGH"
+    },
+    "model_output": {
+      "risk_level": "HIGH",
+      "human_review_required": true,
+      "route": "MANUAL_REVIEW",
+      "priority": "HIGH"
+    },
+    "raw_output": "{\"risk_level\": \"HIGH\", \"human_review_required\": true, \"route\": \"MANUAL_REVIEW\", \"priority\": \"HIGH\"}",
+    "latency_seconds": 105.886,
+    "comparison": {
+      "risk_level_match": false,
+      "human_review_match": true,
+      "route_match": false,
+      "priority_match": true
+    }
+  },
+  {
+    "case_id": "EVAL-03",
+    "model": "llama3.2:3b",
+    "input": {
+      "case_id": "EVAL-03",
+      "amount": 15000,
+      "channel": "Card",
+      "location": "Unknown",
+      "device": "Known Device",
+      "failed_logins": 0
+    },
+    "reference": {
+      "risk_level": "LOW",
+      "human_review_required": true,
+      "route": "EVIDENCE_VERIFICATION",
+      "priority": "HIGH"
+    },
+    "model_output": {
+      "risk_level": "LOW",
+      "human_review_required": false,
+      "route": "STANDARD_INVESTIGATION",
+      "priority": "NORMAL"
+    },
+    "raw_output": "{\n  \"risk_level\": \"LOW\",\n  \"human_review_required\": false,\n  \"route\": \"STANDARD_INVESTIGATION\",\n  \"priority\": \"NORMAL\"\n}",
+    "latency_seconds": 9.48,
+    "comparison": {
+      "risk_level_match": true,
+      "human_review_match": false,
+      "route_match": false,
+      "priority_match": false
+    }
+  },
+  {
+    "case_id": "EVAL-03",
+    "model": "gemma3:4b",
+    "input": {
+      "case_id": "EVAL-03",
+      "amount": 15000,
+      "channel": "Card",
+      "location": "Unknown",
+      "device": "Known Device",
+      "failed_logins": 0
+    },
+    "reference": {
+      "risk_level": "LOW",
+      "human_review_required": true,
+      "route": "EVIDENCE_VERIFICATION",
+      "priority": "HIGH"
+    },
+    "model_output": {
+      "risk_level": "MEDIUM",
+      "human_review_required": true,
+      "route": "STANDARD_INVESTIGATION",
+      "priority": "NORMAL"
+    },
+    "raw_output": "{\n  \"risk_level\": \"MEDIUM\",\n  \"human_review_required\": true,\n  \"route\": \"STANDARD_INVESTIGATION\",\n  \"priority\": \"NORMAL\"\n}",
+    "latency_seconds": 12.336,
+    "comparison": {
+      "risk_level_match": false,
+      "human_review_match": true,
+      "route_match": false,
+      "priority_match": false
+    }
+  },
+  {
+    "case_id": "EVAL-04",
+    "model": "qwen3:4b",
+    "input": {
+      "case_id": "EVAL-04",
+      "amount": 60000,
+      "channel": "ATM",
+      "location": "Usual Location",
+      "device": "Known Device",
+      "failed_logins": 0
+    },
+    "reference": {
+      "risk_level": "LOW",
+      "human_review_required": false,
+      "route": "STANDARD_REVIEW",
+      "priority": "ROUTINE"
+    },
+    "model_output": {
+      "risk_level": "LOW",
+      "human_review_required": false,
+      "route": "STANDARD_REVIEW",
+      "priority": "ROUTINE"
+    },
+    "raw_output": "{\"risk_level\": \"LOW\", \"human_review_required\": false, \"route\": \"STANDARD_REVIEW\", \"priority\": \"ROUTINE\"}",
+    "latency_seconds": 68.907,
+    "comparison": {
+      "risk_level_match": true,
+      "human_review_match": true,
+      "route_match": true,
+      "priority_match": true
+    }
+  },
+  {
+    "case_id": "EVAL-04",
+    "model": "llama3.2:3b",
+    "input": {
+      "case_id": "EVAL-04",
+      "amount": 60000,
+      "channel": "ATM",
+      "location": "Usual Location",
+      "device": "Known Device",
+      "failed_logins": 0
+    },
+    "reference": {
+      "risk_level": "LOW",
+      "human_review_required": false,
+      "route": "STANDARD_REVIEW",
+      "priority": "ROUTINE"
+    },
+    "model_output": {
+      "risk_level": "LOW",
+      "human_review_required": false,
+      "route": "STANDARD_INVESTIGATION",
+      "priority": "NORMAL"
+    },
+    "raw_output": "{\n  \"risk_level\": \"LOW\",\n  \"human_review_required\": false,\n  \"route\": \"STANDARD_INVESTIGATION\",\n  \"priority\": \"NORMAL\"\n}",
+    "latency_seconds": 10.27,
+    "comparison": {
+      "risk_level_match": true,
+      "human_review_match": true,
+      "route_match": false,
+      "priority_match": false
+    }
+  },
+  {
+    "case_id": "EVAL-04",
+    "model": "gemma3:4b",
+    "input": {
+      "case_id": "EVAL-04",
+      "amount": 60000,
+      "channel": "ATM",
+      "location": "Usual Location",
+      "device": "Known Device",
+      "failed_logins": 0
+    },
+    "reference": {
+      "risk_level": "LOW",
+      "human_review_required": false,
+      "route": "STANDARD_REVIEW",
+      "priority": "ROUTINE"
+    },
+    "model_output": {
+      "risk_level": "LOW",
+      "human_review_required": false,
+      "route": "STANDARD_REVIEW",
+      "priority": "ROUTINE"
+    },
+    "raw_output": "{\n  \"risk_level\": \"LOW\",\n  \"human_review_required\": false,\n  \"route\": \"STANDARD_REVIEW\",\n  \"priority\": \"ROUTINE\"\n}",
+    "latency_seconds": 12.993,
+    "comparison": {
+      "risk_level_match": true,
+      "human_review_match": true,
+      "route_match": true,
+      "priority_match": true
+    }
+  },
+  {
+    "case_id": "EVAL-05",
+    "model": "qwen3:4b",
+    "input": {
+      "case_id": "EVAL-05",
+      "amount": 40000,
+      "channel": "Mobile Banking",
+      "location": "New Location",
+      "device": "Known Device",
+      "failed_logins": 3
+    },
+    "reference": {
+      "risk_level": "MEDIUM",
+      "human_review_required": true,
+      "route": "STANDARD_INVESTIGATION",
+      "priority": "NORMAL"
+    },
+    "model_output": {
+      "risk_level": "HIGH",
+      "human_review_required": true,
+      "route": "PRIORITY_INVESTIGATION",
+      "priority": "URGENT"
+    },
+    "raw_output": "{\"risk_level\": \"HIGH\", \"human_review_required\": true, \"route\": \"PRIORITY_INVESTIGATION\", \"priority\": \"URGENT\"}",
+    "latency_seconds": 42.125,
+    "comparison": {
+      "risk_level_match": false,
+      "human_review_match": true,
+      "route_match": false,
+      "priority_match": false
+    }
+  },
+  {
+    "case_id": "EVAL-05",
+    "model": "llama3.2:3b",
+    "input": {
+      "case_id": "EVAL-05",
+      "amount": 40000,
+      "channel": "Mobile Banking",
+      "location": "New Location",
+      "device": "Known Device",
+      "failed_logins": 3
+    },
+    "reference": {
+      "risk_level": "MEDIUM",
+      "human_review_required": true,
+      "route": "STANDARD_INVESTIGATION",
+      "priority": "NORMAL"
+    },
+    "model_output": {
+      "risk_level": "MEDIUM",
+      "human_review_required": true,
+      "route": "STANDARD_INVESTIGATION",
+      "priority": "NORMAL"
+    },
+    "raw_output": "{\n  \"risk_level\": \"MEDIUM\",\n  \"human_review_required\": true,\n  \"route\": \"STANDARD_INVESTIGATION\",\n  \"priority\": \"NORMAL\"\n}",
+    "latency_seconds": 10.358,
+    "comparison": {
+      "risk_level_match": true,
+      "human_review_match": true,
+      "route_match": true,
+      "priority_match": true
+    }
+  },
+  {
+    "case_id": "EVAL-05",
+    "model": "gemma3:4b",
+    "input": {
+      "case_id": "EVAL-05",
+      "amount": 40000,
+      "channel": "Mobile Banking",
+      "location": "New Location",
+      "device": "Known Device",
+      "failed_logins": 3
+    },
+    "reference": {
+      "risk_level": "MEDIUM",
+      "human_review_required": true,
+      "route": "STANDARD_INVESTIGATION",
+      "priority": "NORMAL"
+    },
+    "model_output": {
+      "risk_level": "MEDIUM",
+      "human_review_required": true,
+      "route": "STANDARD_INVESTIGATION",
+      "priority": "HIGH"
+    },
+    "raw_output": "{\n  \"risk_level\": \"MEDIUM\",\n  \"human_review_required\": true,\n  \"route\": \"STANDARD_INVESTIGATION\",\n  \"priority\": \"HIGH\"\n}",
+    "latency_seconds": 12.855,
+    "comparison": {
+      "risk_level_match": true,
+      "human_review_match": true,
+      "route_match": true,
+      "priority_match": false
+    }
+  },
+  {
+    "case_id": "EVAL-06",
+    "model": "qwen3:4b",
+    "input": {
+      "case_id": "EVAL-06",
+      "amount": 10000,
+      "channel": "Unknown Channel",
+      "location": "Unknown",
+      "device": "Unknown",
+      "failed_logins": 5
+    },
+    "reference": {
+      "risk_level": "MEDIUM",
+      "human_review_required": true,
+      "route": "EVIDENCE_VERIFICATION",
+      "priority": "HIGH"
+    },
+    "model_output": {
+      "risk_level": "HIGH",
+      "human_review_required": true,
+      "route": "PRIORITY_INVESTIGATION",
+      "priority": "URGENT"
+    },
+    "raw_output": "{\"risk_level\": \"HIGH\", \"human_review_required\": true, \"route\": \"PRIORITY_INVESTIGATION\", \"priority\": \"URGENT\"}",
+    "latency_seconds": 37.262,
+    "comparison": {
+      "risk_level_match": false,
+      "human_review_match": true,
+      "route_match": false,
+      "priority_match": false
+    }
+  },
+  {
+    "case_id": "EVAL-06",
+    "model": "llama3.2:3b",
+    "input": {
+      "case_id": "EVAL-06",
+      "amount": 10000,
+      "channel": "Unknown Channel",
+      "location": "Unknown",
+      "device": "Unknown",
+      "failed_logins": 5
+    },
+    "reference": {
+      "risk_level": "MEDIUM",
+      "human_review_required": true,
+      "route": "EVIDENCE_VERIFICATION",
+      "priority": "HIGH"
+    },
+    "model_output": {
+      "risk_level": "MEDIUM",
+      "human_review_required": true,
+      "route": "STANDARD_INVESTIGATION",
+      "priority": "NORMAL"
+    },
+    "raw_output": "{\n  \"risk_level\": \"MEDIUM\",\n  \"human_review_required\": true,\n  \"route\": \"STANDARD_INVESTIGATION\",\n  \"priority\": \"NORMAL\"\n}",
+    "latency_seconds": 10.388,
+    "comparison": {
+      "risk_level_match": true,
+      "human_review_match": true,
+      "route_match": false,
+      "priority_match": false
+    }
+  },
+  {
+    "case_id": "EVAL-06",
+    "model": "gemma3:4b",
+    "input": {
+      "case_id": "EVAL-06",
+      "amount": 10000,
+      "channel": "Unknown Channel",
+      "location": "Unknown",
+      "device": "Unknown",
+      "failed_logins": 5
+    },
+    "reference": {
+      "risk_level": "MEDIUM",
+      "human_review_required": true,
+      "route": "EVIDENCE_VERIFICATION",
+      "priority": "HIGH"
+    },
+    "model_output": {
+      "risk_level": "MEDIUM",
+      "human_review_required": true,
+      "route": "STANDARD_INVESTIGATION",
+      "priority": "NORMAL"
+    },
+    "raw_output": "{\n  \"risk_level\": \"MEDIUM\",\n  \"human_review_required\": true,\n  \"route\": \"STANDARD_INVESTIGATION\",\n  \"priority\": \"NORMAL\"\n}",
+    "latency_seconds": 12.845,
+    "comparison": {
+      "risk_level_match": true,
+      "human_review_match": true,
+      "route_match": false,
+      "priority_match": false
+    }
+  }
+]

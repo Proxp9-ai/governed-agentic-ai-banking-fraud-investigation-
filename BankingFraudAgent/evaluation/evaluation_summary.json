@@ -1,0 +1,41 @@
+{
+  "qwen3:4b": {
+    "total_cases": 6,
+    "completed_cases": 6,
+    "failed_cases": 0,
+    "completion_rate_percent": 100.0,
+    "risk_level_match_percent": 50.0,
+    "human_review_match_percent": 100.0,
+    "route_match_percent": 50.0,
+    "priority_match_percent": 66.67,
+    "all_fields_match_percent": 50.0,
+    "structured_output_rate_percent": 100.0,
+    "average_latency_seconds": 59.4
+  },
+  "llama3.2:3b": {
+    "total_cases": 6,
+    "completed_cases": 6,
+    "failed_cases": 0,
+    "completion_rate_percent": 100.0,
+    "risk_level_match_percent": 83.33,
+    "human_review_match_percent": 83.33,
+    "route_match_percent": 16.67,
+    "priority_match_percent": 16.67,
+    "all_fields_match_percent": 16.67,
+    "structured_output_rate_percent": 100.0,
+    "average_latency_seconds": 10.98
+  },
+  "gemma3:4b": {
+    "total_cases": 6,
+    "completed_cases": 6,
+    "failed_cases": 0,
+    "completion_rate_percent": 100.0,
+    "risk_level_match_percent": 66.67,
+    "human_review_match_percent": 100.0,
+    "route_match_percent": 50.0,
+    "priority_match_percent": 33.33,
+    "all_fields_match_percent": 33.33,
+    "structured_output_rate_percent": 100.0,
+    "average_latency_seconds": 13.49
+  }
+}

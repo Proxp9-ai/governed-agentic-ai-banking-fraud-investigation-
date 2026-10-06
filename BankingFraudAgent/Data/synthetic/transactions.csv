@@ -1,0 +1,7 @@
+transaction_id,amount,channel,location,device,failed_logins,label
+TXN-1001,5000,UPI,Usual Location,Recognised Device,0,0
+TXN-1002,75000,Internet Banking,New Location,New Device,4,1
+TXN-1003,1200,Card,Usual Location,Recognised Device,0,0
+TXN-1004,32000,UPI,New Location,Recognised Device,1,0
+TXN-1005,95000,Mobile Banking,New Location,New Device,5,1
+TXN-1006,8500,ATM,Usual Location,New Device,2,0
